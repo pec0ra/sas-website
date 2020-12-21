@@ -69,12 +69,6 @@
     max-width: 100%;
     margin: 0;
   }
-  .custom-bg-color-login-button {
-    background-color: rgba(1, 58, 129, 1) !important;
-  }
-  #main-container {
-    height: auto;
-  }
 
   /* Page */
   ul.special {
@@ -118,6 +112,9 @@
   .last-image img {
     display: block;
     margin: 0 auto;
+  }
+  #main-container {
+    height: auto;
   }
   @media (max-width: 600px) {
     .container {
@@ -320,7 +317,6 @@
     width: 50%;
   }
   .club__right {
-    padding-top: 120px;
     padding-left: 20px;
   }
   .club img {
@@ -341,13 +337,8 @@
       width: 100%;
     }
     .club__right {
-      padding-top: 0;
       padding-left: 0;
     }
-  }
-
-  .last-image {
-    margin-top: -80px;
   }
 
   /* Sponsors */
