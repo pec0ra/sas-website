@@ -1,13 +1,13 @@
 
 // This is the base url to the portrait images. It needs to end with a slash "/" (e.g. "http://pabrasey.webfactional.com/sas/users/photos/")
-const BASE_IMG_URL = "http://pabrasey.webfactional.com/sas/users/photos/"
+let BASE_IMG_URL = "http://pabrasey.webfactional.com/sas/users/photos/"
 
 // This is the id of the google spreadsheet. This id can be extracted from any spreadsheet URL
-const SHEET_ID = "1k4pfhABQ44m5v8_T_4k4F-dQ6gt3MFYjcBAMe2BOubA"
+let SHEET_ID = "1k4pfhABQ44m5v8_T_4k4F-dQ6gt3MFYjcBAMe2BOubA"
 
 
 // No need to edit unless the google api changes
-const SHEET_JSON_ADDRESS = "https://spreadsheets.google.com/feeds/cells/" + SHEET_ID + "/1/public/full?alt=json"
+let SHEET_JSON_ADDRESS = "https://spreadsheets.google.com/feeds/cells/" + SHEET_ID + "/1/public/full?alt=json"
 
 function getRows(data) {
     var ret = {};
