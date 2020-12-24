@@ -59,3 +59,33 @@ window.addCommittee = function (containerId, section, language) {
             });
     });
 };
+
+
+window.addAthlete = function (containerId, section, language) {
+    var functionIndex;
+    if (language === "fr") {
+        functionIndex = 4;
+    } else if (language === "de") {
+        functionIndex = 3;
+    } else {
+        functionIndex = 2; // English
+    }
+    $(document).ready(function () {
+        $.getJSON(SHEET_JSON_ADDRESS)
+            .done(function (data) {
+                const allRows = getRows(data.feed.entry);
+                const sectionRows = filterRows(allRows, section);
+                $.each(sectionRows, function (i, item) {
+
+                    let imgURL
+                    if (item[12]){
+                        imgURL = BASE_IMG_URL + item[12] + ".jpg";
+                    } else {
+                        imgURL = BASE_IMG_URL + "default.jpg";
+                    }
+
+                    $(containerId).append('<div class="user"><img alt="' + item[5] + ' ' + item[6] + '" src="' + imgURL + '" width="160" height="160" style="object-fit: cover;width: 160px;height: 160px;"><div class="user__content"><h4>' + item[functionIndex] + '</h4><p>' + item[5] + ' ' + item[6] + '</a></div></div>');
+                });
+            });
+    });
+};
