@@ -84,7 +84,7 @@ window.addAthlete = function (containerId, section, language) {
                         imgURL = BASE_IMG_URL + "default.jpg";
                     }
 
-                    $(containerId).append('<div class="user"><img alt="' + item[5] + ' ' + item[6] + '" src="' + imgURL + '" width="160" height="160" style="object-fit: cover;width: 160px;height: 160px;"><div class="user__content"><h4>' + item[functionIndex] + '</h4><p>' + item[5] + ' ' + item[6] + '</a></div></div>');
+                    $(containerId).append('<div class="user"><img alt="' + item[5] + ' ' + item[6] + '" src="' + imgURL + '" width="160" height="160" style="object-fit: cover;width: 160px;height: 160px;"><div class="user__content"><h4>' + item[functionIndex] + '</h4><p>' + item[5] + ' ' + item[6] +  '</div></div>');
                 });
             });
     });
