@@ -1,6 +1,6 @@
 
 // This is the base url to the portrait images. It needs to end with a slash "/" (e.g. "http://pabrasey.webfactional.com/sas/users/photos/")
-let BASE_IMG_URL = "http://pabrasey.webfactional.com/sas/users/photos/"
+let BASE_IMG_URL = "https://cdn.jsdelivr.net/gh/pec0ra/sas-website@latest/photos/"
 
 // This is the id of the google spreadsheet. This id can be extracted from any spreadsheet URL
 let SHEET_ID = "1k4pfhABQ44m5v8_T_4k4F-dQ6gt3MFYjcBAMe2BOubA"
