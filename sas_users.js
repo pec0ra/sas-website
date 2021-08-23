@@ -7,7 +7,7 @@ let SHEET_ID = "1k4pfhABQ44m5v8_T_4k4F-dQ6gt3MFYjcBAMe2BOubA"
 
 
 // No need to edit unless the google api changes
-let SHEET_JSON_ADDRESS = "https://spreadsheets.google.com/feeds/cells/" + SHEET_ID + "/1/public/full?alt=json"
+let SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SHEET_ID + "/gviz/tq?tqx=out:json"
 
 function getRows(data) {
     var ret = {};
@@ -41,8 +41,9 @@ window.addCommittee = function (containerId, section, language) {
         functionIndex = 2; // English
     }
     $(document).ready(function () {
-        $.getJSON(SHEET_JSON_ADDRESS)
-            .done(function (data) {
+        $.get(SHEET_JSON_ADDRESS)
+            .done(function (rawData) {
+                const data = JSON.parse(text.substr(47).slice(0, -2))
                 const allRows = getRows(data.feed.entry);
                 const sectionRows = filterRows(allRows, section);
                 $.each(sectionRows, function (i, item) {
