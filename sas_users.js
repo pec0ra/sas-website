@@ -1,4 +1,3 @@
-
 // This is the base url to the portrait images. It needs to end with a slash "/" (e.g. "http://pabrasey.webfactional.com/sas/users/photos/")
 let BASE_IMG_URL = "https://cdn.jsdelivr.net/gh/pec0ra/sas-website/photos/"
 
@@ -11,12 +10,19 @@ let SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SHEET_ID + 
 
 function getRows(data) {
     var ret = {};
+    var rowIndex = 0;
     data.forEach(function (entry) {
-        var cellInfo = entry["gs$cell"];
-        if (!ret[cellInfo.row]) {
-            ret[cellInfo.row] = {}
+        if (!ret[rowIndex]) {
+            ret[rowIndex] = {}
         }
-        ret[cellInfo.row][cellInfo.col] = cellInfo.inputValue
+        var colIndex = 1;
+        entry.c.forEach(function (col) {
+            if (col) {
+                ret[rowIndex][colIndex] = col.v
+            }
+            colIndex++;
+        })
+        rowIndex++;
     })
     return ret;
 }
@@ -41,10 +47,11 @@ window.addCommittee = function (containerId, section, language) {
         functionIndex = 2; // English
     }
     $(document).ready(function () {
-        $.get(SHEET_JSON_ADDRESS)
-            .done(function (rawData) {
-                const data = JSON.parse(text.substr(47).slice(0, -2))
-                const allRows = getRows(data.feed.entry);
+        fetch(SHEET_JSON_ADDRESS)
+            .then(res => res.text())
+            .then(rawData => {
+                const data = JSON.parse(rawData.substr(47).slice(0, -2));
+                const allRows = getRows(data.table.rows);
                 const sectionRows = filterRows(allRows, section);
                 $.each(sectionRows, function (i, item) {
 
@@ -72,9 +79,11 @@ window.addAthlete = function (containerId, section, language) {
         functionIndex = 2; // English
     }
     $(document).ready(function () {
-        $.getJSON(SHEET_JSON_ADDRESS)
-            .done(function (data) {
-                const allRows = getRows(data.feed.entry);
+        fetch(SHEET_JSON_ADDRESS)
+            .then(res => res.text())
+            .then(rawData => {
+                const data = JSON.parse(rawData.substr(47).slice(0, -2));
+                const allRows = getRows(data.table.rows);
                 const sectionRows = filterRows(allRows, section);
                 $.each(sectionRows, function (i, item) {
 
