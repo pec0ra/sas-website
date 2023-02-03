@@ -351,10 +351,12 @@
     max-width: 150px;
   }
   .sponsor_grid {
+    width: 80%;
     display: flex;
+    flex-wrap: wrap;
   }
   .sponsor {
-    width: calc(100% / 6);
+    width: calc(100% / 4);
   }
   @media (max-width: 900px) {
     .sponsors h2 {
