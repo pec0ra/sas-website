@@ -12,18 +12,29 @@
     max-width: 150px;
   }
   .sponsors .sponsor {
-    width: calc(100% / 6);
+    width: calc(100% / 7);
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1440px) {
+    .sponsors h2 {
+      text-align: center;
+    }
+    .sponsors .sponsor {
+      width: 25%;
+    }
+    .sponsors .sponsor img {
+      margin: 0 auto;
+    }
+    .sponsors .sponsor_grid {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 1023px) {
     .sponsors h2 {
       text-align: center;
     }
     .sponsors .sponsor {
       width: 33.33%;
-    }
-    .sponsors .sponsor_grid {
-      flex-wrap: wrap;
-      justify-content: center;
     }
   }
   @media (max-width: 44.9375em) {
@@ -33,9 +44,11 @@
     .sponsors .sponsor {
       width: 100%;
     }
-    .sponsors .sponsor img {
-      margin: 0 auto;
-    }
+  }
+
+  /* Hide default hivebrite footer */
+  footer {
+	  display: none;
   }
 </style>
 
