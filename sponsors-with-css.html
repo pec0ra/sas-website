@@ -3,54 +3,58 @@
   /* Sponsors */
   .sponsors h2 {
     color: #fff;
-    margin-bottom: 40px;
   }
-  .sponsor img {
+  .sponsors .sponsor_grid {
+    display: flex;
+  }
+  .sponsors .sponsor img {
     display: block;
     max-width: 150px;
   }
-  .sponsor_grid {
-    display: flex;
-  }
-  .sponsor {
+  .sponsors .sponsor {
     width: calc(100% / 6);
   }
   @media (max-width: 900px) {
     .sponsors h2 {
       text-align: center;
     }
-    .sponsor_grid {
+    .sponsors .sponsor {
+      width: 33.33%;
+    }
+    .sponsors .sponsor_grid {
       flex-wrap: wrap;
       justify-content: center;
     }
-    .sponsor {
-      width: 33.33%;
-    }
   }
   @media (max-width: 44.9375em) {
-    .sponsor {
+    .sponsors .sponsor {
+      width: 33.33%;
+    }
+    .sponsors .sponsor {
       width: 100%;
     }
-    .sponsor img {
+    .sponsors .sponsor img {
       margin: 0 auto;
     }
   }
 </style>
 
 <div class="sponsors">
-<h2>Our Sponsors</h2>
+	<h2>Our Sponsors</h2>
+	<div class="sponsor_grid">
 
-<div class="sponsor"><a href="https://www.balgrist.ch/" target="_blank"><img alt="Der Balgrist" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/balgrist_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.balgrist.ch/" target="_blank"><img alt="Der Balgrist" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/balgrist_logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.juliusbaer.com/" target="_blank"><img alt="Julius Bär" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/julius_baer_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.juliusbaer.com/" target="_blank"><img alt="Julius Bär" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/julius_baer_logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.sunrise.ch/" target="_blank"><img alt="Sunrise" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/sunrise_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.sunrise.ch/" target="_blank"><img alt="Sunrise" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/sunrise_logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.dsm.com/" target="_blank"><img alt="Dsm" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/dsm_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.dsm.com/" target="_blank"><img alt="Dsm" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/dsm_logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.patrimonium.ch/" target="_blank"><img alt="Patrimonium" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/patrinonium_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.patrimonium.ch/" target="_blank"><img alt="Patrimonium" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/patrinonium_logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.naef-prestige.ch/" target="_blank"><img alt="Naef" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/naef-logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.naef-prestige.ch/" target="_blank"><img alt="Naef" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/naef-logo_white.png" /> </a></div>
 
-<div class="sponsor"><a href="https://www.helvetia.com/" target="_blank"><img alt="Helvetia" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/helvetia_logo_white.png" /> </a></div>
+		<div class="sponsor"><a href="https://www.helvetia.com/" target="_blank"><img alt="Helvetia" src="https://cdn.jsdelivr.net/gh/pec0ra/sas-website/sponsors/helvetia_logo_white.png" /> </a></div>
+	</div>
 </div>
