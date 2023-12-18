@@ -62,7 +62,7 @@ window.addCommittee = function (containerId, section, language) {
                         imgURL = BASE_IMG_URL + "default.jpg";
                     }
 
-                    $(containerId).append('<div class="user" style="width: 25%;margin-bottom: 40px;text-align: center;"><img alt="' + item[5] + ' ' + item[6] + '" src="' + imgURL + '" width="160" height="160" style="object-fit: cover;width: 160px;height: 160px;border-radius: 50%;"><div class="user__content" style="padding: 20px 10px;"><h4 style="position: relative;display: inline-block;font-weight: 600;">' + item[functionIndex] + '</h4><div style="position: absolute;bottom: -10px;left: 50%;transform: translateX(-50%);width: 40px;height: 3px;background: rgb(1, 58, 129);"></div><p style="line-height: 30px">' + item[5] + ' ' + item[6] + '</p><a href="mailto:' + item[7] + '">' + item[7] + '</a></div></div>');
+                    $(containerId).append('<div class="user" style="width: 25%;margin-bottom: 40px;text-align: center;"><img alt="' + item[5] + ' ' + item[6] + '" src="' + imgURL + '" width="160" height="160" style="object-fit: cover;width: 160px;height: 160px;border-radius: 50%;"><div class="user__content" style="padding: 20px 10px;"><h4 style="position: relative;display: inline-block;font-weight: 600;">' + item[functionIndex] + '</h4><div style="position: relative;bottom: 10px;left: 50%;transform: translateX(-50%);width: 40px;height: 3px;background: rgb(1, 58, 129);"></div><p style="line-height: 30px">' + item[5] + ' ' + item[6] + '</p><a href="mailto:' + item[7] + '">' + item[7] + '</a></div></div>');
                 });
             });
     });
