@@ -50,7 +50,7 @@ window.addGallery = function (containerId, language) {
 				console.log('header');
 			        $(containerId).append('<h3 style="width:100%; text-align: center; font-family: Muli; font-size: 32px; line-height: 39px; padding: 30px; margin-top: 20px;">' + item[2] + '</h3>');
 			    } else {
-			        $(containerId).append('<a href="' + item[4] + '" style="position: relative; width: calc(25% - 20px); height: 220px; margin-bottom: 20px; margin-right: 20px;"><div class="publication" style="width: 100%; height: 100%; background-image: url(\'' + item[5] + '\');background-position: center center; background-repeat: no-repeat; background-size: covert; border-radius: 10px"><h4 style="position: absolute; bottom: 0px; margin: 0px; padding: 15px; width: 100%; color: #fff; border-radius: 10px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);">' + item[functionIndex] + '</h4></div></a>');
+			        $(containerId).append('<a href="' + item[4] + '" style="position: relative; width: calc(25% - 20px); height: 220px; margin-bottom: 20px; margin-right: 20px;"><div class="publication" style="width: 100%; height: 100%; background-image: url(\'' + item[5] + '\');background-position: center center; background-repeat: no-repeat; background-size: cover; border-radius: 10px"><h4 style="position: absolute; bottom: 0px; margin: 0px; padding: 15px; width: 100%; color: #fff; border-radius: 10px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);">' + item[functionIndex] + '</h4></div></a>');
 			    }
 		    }
                 });
