@@ -3,7 +3,7 @@ let SAS_NEWS_SHEET_ID = "1rH9hfFCJqHfFE_1mgHSzBlB9NsJDv6IYordffz2c-KI"
 
 
 // No need to edit unless the google api changes
-let SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SAS_NEWS_SHEET_ID + "/gviz/tq?tqx=out:json"
+let SAS_NEWS_SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SAS_NEWS_SHEET_ID + "/gviz/tq?tqx=out:json"
 
 function getRows(data) {
     var ret = {};
@@ -26,7 +26,7 @@ function getRows(data) {
 
 window.addSasNews = function (containerId) {
     $(document).ready(function () {
-        fetch(SHEET_JSON_ADDRESS)
+        fetch(SAS_NEWS_SHEET_JSON_ADDRESS)
             .then(res => res.text())
             .then(rawData => {
 		console.log(rawData)
