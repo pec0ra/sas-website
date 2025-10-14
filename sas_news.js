@@ -1,9 +1,9 @@
 // This is the id of the google spreadsheet. This id can be extracted from any spreadsheet URL
-let SHEET_ID = "1rH9hfFCJqHfFE_1mgHSzBlB9NsJDv6IYordffz2c-KI"
+let SAS_NEWS_SHEET_ID = "1rH9hfFCJqHfFE_1mgHSzBlB9NsJDv6IYordffz2c-KI"
 
 
 // No need to edit unless the google api changes
-let SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SHEET_ID + "/gviz/tq?tqx=out:json"
+let SHEET_JSON_ADDRESS = "https://docs.google.com/spreadsheets/d/" + SAS_NEWS_SHEET_ID + "/gviz/tq?tqx=out:json"
 
 function getRows(data) {
     var ret = {};
